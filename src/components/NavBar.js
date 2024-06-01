@@ -2,13 +2,18 @@ import React from "react";
 
 function NavBar() {
   const links = ["home", "about", "projects"];
-  const link = links.map(function (oneLink) {
+
+  const link = links.map((lin) => {
     return (
-      <a key={oneLink} href={"#" + oneLink}>{oneLink}</a>
+      <a href={`#${lin}`} key={lin}>{lin}</a>
     );
   })
 
-  return <nav>{link}</nav>;
+  return (
+    <nav>
+      {link}
+    </nav>
+  );
 }
 
 export default NavBar;
